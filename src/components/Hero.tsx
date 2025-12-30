@@ -39,7 +39,7 @@ const Hero = () => {
 
             <div className="opacity-0 animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="hero" size="lg" asChild>
-                <a href="mailto:dr.andualem@example.com">
+                <a href="mailto:kalebtegegn12@gmail.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Contact via Email
                 </a>
@@ -79,7 +79,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-accent-gradient rounded-3xl rotate-6 opacity-20" />
               <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-3xl overflow-hidden shadow-glow">
                 <img
-                  src="src/assets/2025-12-30 17.39.26.jpg"
+                  src="/assets/2025-12-30 17.22.55.jpg"
                   alt="Dr. Andualem Assefa - Professional Portrait"
                   className="w-full h-full object-cover object-top"
                 />

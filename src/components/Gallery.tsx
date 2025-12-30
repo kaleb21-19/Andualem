@@ -6,34 +6,34 @@ const Gallery = () => {
 
   const images = [
     {
-      url: "/src/assets/2025-12-30 17.23.14.jpg",
-      title: "Your Image 1 Title",
-      description: "Description for your first image"
+      url: "/assets/2025-12-30 17.22.55.jpg",
+      title: "Professional Portrait",
+      description: "Dr. Andualem in professional setting"
     },
     {
-      url: "src/assets/2025-12-30 17.23.09.jpg", 
-      title: "Your Image 2 Title",
-      description: "Description for your second image"
+      url: "/assets/2025-12-30 17.23.09.jpg", 
+      title: "Conference Presentation",
+      description: "Presenting research at international conference"
     },
     {
-      url: "src/assets/2025-12-30 17.34.08.jpg",
-      title: "Your Image 3 Title", 
-      description: "Description for your third image"
+      url: "/assets/2025-12-30 17.34.08.jpg",
+      title: "Research Collaboration",
+      description: "Working with international health partners"
     },
     {
-      url: "src/assets/2025-12-30 17.34.12.jpg",
-      title: "Your Image 4 Title",
-      description: "Description for your fourth image"
+      url: "/assets/2025-12-30 17.34.12.jpg",
+      title: "Community Health Initiative",
+      description: "Engaging with local communities for health programs"
     },
     {
-      url: "src/assets/2025-12-30 17.23.31.jpg",
-      title: "Your Image 5 Title",
-      description: "Description for your fifth image"
+      url: "/assets/2025-12-30 17.23.31.jpg",
+      title: "Health Education Workshop",
+      description: "Conducting health education sessions with local residents"
     },
     {
-      url: "src/assets/2025-12-30 17.22.55.jpg",
-      title: "Your Image 6 Title",
-      description: "Description for your sixth image"
+      url: "/assets/2025-12-30 17.22.55.jpg",
+      title: "Research Laboratory",
+      description: "Working in the state-of-the-art research facility"
     }
   ];
 
