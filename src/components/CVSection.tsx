@@ -1,48 +1,54 @@
-import { Download, FileText, Briefcase, GraduationCap } from "lucide-react";
+import { Download, Briefcase, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CVSection = () => {
   const timeline = [
     {
-      year: "2018 - Present",
-      title: "Senior Consultant Physician",
-      organization: "Black Lion Specialized Hospital",
+      year: "2023 - Present",
+      title: "Health Field Officer",
+      organization: "International Committee of the Red Cross (ICRC)",
       type: "experience"
     },
     {
-      year: "2015 - 2018",
-      title: "Consultant Physician",
-      organization: "St. Paul's Hospital Millennium Medical College",
+      year: "2022 - 2023",
+      title: "Immunization & Vaccines AEFI Monitoring Expert",
+      organization: "EFDA / ABH Partners / UNICEF",
       type: "experience"
     },
     {
-      year: "2015",
-      title: "Master of Public Health",
-      organization: "Harvard T.H. Chan School of Public Health",
-      type: "education"
-    },
-    {
-      year: "2012 - 2015",
-      title: "Fellow in Cardiology",
-      organization: "Johns Hopkins University Hospital",
-      type: "education"
-    },
-    {
-      year: "2008 - 2012",
-      title: "Attending Physician",
-      organization: "Addis Ababa University Medical Center",
+      year: "2020 - 2021",
+      title: "Case Management Officer",
+      organization: "World Health Organization (WHO), Ethiopia",
       type: "experience"
     },
     {
-      year: "2005 - 2008",
-      title: "Internal Medicine Residency",
-      organization: "Black Lion Specialized Hospital",
-      type: "education"
+      year: "2017 - 2019",
+      title: "Public Health Emergency Surveillance Officer",
+      organization: "World Health Organization (WHO), Oromia Region",
+      type: "experience"
+    },
+    {
+      year: "2016 - 2017",
+      title: "STOP Field Epidemiology Consultant",
+      organization: "World Health Organization (WHO), Pakistan",
+      type: "experience"
+    },
+    {
+      year: "2014 - 2015",
+      title: "Emergency Primary Health Care Doctor",
+      organization: "International Medical Corps, South Sudan",
+      type: "experience"
+    },
+    {
+      year: "2011 - 2014",
+      title: "Clinical Physician Mentor",
+      organization: "Abt Associates, Ethiopia",
+      type: "experience"
     },
     {
       year: "2005",
       title: "Doctor of Medicine (MD)",
-      organization: "Addis Ababa University School of Medicine",
+      organization: "Addis Ababa University, Medical Faculty",
       type: "education"
     }
   ];
@@ -61,14 +67,14 @@ const CVSection = () => {
             Professional <span className="text-gradient">Timeline</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A visual overview of my academic journey and professional experience in medicine.
+            A visual overview of my academic journey and professional experience in global health and humanitarian medicine.
           </p>
         </div>
 
         {/* Download CV button */}
         <div className="text-center mb-12">
           <Button variant="gold" size="lg" asChild>
-            <a href="#" download>
+            <a href="/public/Profile.pdf" download target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-5 w-5" />
               Download Full CV (PDF)
             </a>
@@ -99,9 +105,9 @@ const CVSection = () => {
                         <div className="flex items-start gap-4">
                           <div className={`w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center ${isEducation ? 'bg-teal/10' : 'bg-gold/10'}`}>
                             {isEducation ? (
-                              <GraduationCap className={`w-6 h-6 text-teal`} />
+                              <GraduationCap className="w-6 h-6 text-teal" />
                             ) : (
-                              <Briefcase className={`w-6 h-6 text-gold`} />
+                              <Briefcase className="w-6 h-6 text-gold" />
                             )}
                           </div>
                           <div>

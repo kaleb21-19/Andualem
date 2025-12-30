@@ -8,6 +8,7 @@ import Gallery from "@/components/Gallery";
 import CVSection from "@/components/CVSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ProfessionalExperience from "@/components/Publications";
 
 const Index = () => {
   return (
@@ -16,7 +17,7 @@ const Index = () => {
       <Hero />
       <About />
       <Specializations />
-      <Publications />
+      <ProfessionalExperience />
       <Testimonials />
       <Gallery />
       <CVSection />

@@ -1,62 +1,62 @@
 import { 
-  Heart, 
+  ShieldCheck, 
+  Syringe, 
   Activity, 
-  Stethoscope, 
-  Brain, 
+  AlertTriangle, 
   Users, 
-  Microscope,
-  Pill,
-  ClipboardCheck
+  BarChart3,
+  BookOpen,
+  Globe
 } from "lucide-react";
 
 const Specializations = () => {
   const specializations = [
     {
-      icon: Heart,
-      title: "Cardiovascular Medicine",
-      description: "Comprehensive diagnosis and treatment of heart conditions, including preventive cardiology and heart failure management.",
+      icon: ShieldCheck,
+      title: "Health Systems Strengthening",
+      description: "Designing and implementing strategies to improve healthcare delivery and resilience at regional and national levels.",
       color: "teal"
     },
     {
-      icon: Activity,
-      title: "Internal Medicine",
-      description: "Primary care for adults with focus on prevention, diagnosis, and treatment of complex medical conditions.",
+      icon: Syringe,
+      title: "Immunization & Vaccines",
+      description: "Expertise in polio eradication, COVID-19 campaigns, and monitoring vaccine safety and effectiveness.",
       color: "gold"
     },
     {
-      icon: Brain,
-      title: "Chronic Disease Management",
-      description: "Long-term care strategies for diabetes, hypertension, and other chronic conditions with personalized treatment plans.",
+      icon: Activity,
+      title: "Public Health Surveillance",
+      description: "Early detection, monitoring, and response to outbreaks and health emergencies across diverse regions.",
       color: "teal"
     },
     {
-      icon: Stethoscope,
-      title: "Preventive Healthcare",
-      description: "Proactive health screenings, lifestyle counseling, and early intervention strategies to prevent illness.",
+      icon: AlertTriangle,
+      title: "Emergency & Humanitarian Medicine",
+      description: "Delivering essential healthcare in conflict zones and refugee settings under complex humanitarian emergencies.",
       color: "gold"
     },
     {
       icon: Users,
-      title: "Geriatric Medicine",
-      description: "Specialized care for elderly patients addressing age-related health challenges with compassion and expertise.",
+      title: "Capacity Building & Mentorship",
+      description: "Training and mentoring healthcare providers to strengthen clinical skills and public health practices.",
       color: "teal"
     },
     {
-      icon: Microscope,
-      title: "Clinical Research",
-      description: "Active participation in clinical trials and research studies to advance medical knowledge and treatment options.",
+      icon: BarChart3,
+      title: "Data Quality & Health Information Systems",
+      description: "Improving DHIS2 data collection, analysis, and reporting for evidence-based decision making.",
       color: "gold"
     },
     {
-      icon: Pill,
-      title: "Medication Management",
-      description: "Expert oversight of complex medication regimens to optimize therapeutic outcomes and minimize interactions.",
+      icon: BookOpen,
+      title: "Case Management & Preparedness",
+      description: "Guiding facility readiness, infection prevention, and case management during pandemics and emergencies.",
       color: "teal"
     },
     {
-      icon: ClipboardCheck,
-      title: "Health Consultations",
-      description: "Second opinion services and comprehensive health assessments for complex medical cases.",
+      icon: Globe,
+      title: "Stakeholder Coordination",
+      description: "Building networks with governments, NGOs, and UN agencies to ensure effective health program implementation.",
       color: "gold"
     }
   ];
@@ -75,8 +75,8 @@ const Specializations = () => {
             Areas of <span className="text-gradient">Specialization</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Comprehensive medical expertise across multiple disciplines, focused on delivering 
-            exceptional patient outcomes through evidence-based practice.
+            Public health expertise across immunization, emergency response, and health systems strengthening, 
+            focused on delivering impactful outcomes in humanitarian and global health contexts.
           </p>
         </div>
 

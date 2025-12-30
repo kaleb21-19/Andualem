@@ -6,34 +6,34 @@ const Gallery = () => {
 
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
-      title: "Medical Conference 2023",
-      description: "Presenting research findings at the African Medical Conference"
+      url: "/src/assets/2025-12-30 17.23.14.jpg",
+      title: "Your Image 1 Title",
+      description: "Description for your first image"
     },
     {
-      url: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
-      title: "Patient Consultation",
-      description: "Providing comprehensive care to patients"
+      url: "src/assets/2025-12-30 17.23.09.jpg", 
+      title: "Your Image 2 Title",
+      description: "Description for your second image"
     },
     {
-      url: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=400&fit=crop",
-      title: "Award Ceremony",
-      description: "Receiving the Excellence in Healthcare Award"
+      url: "src/assets/2025-12-30 17.34.08.jpg",
+      title: "Your Image 3 Title", 
+      description: "Description for your third image"
     },
     {
-      url: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=600&h=400&fit=crop",
-      title: "Research Laboratory",
-      description: "Conducting clinical research for improved treatments"
+      url: "src/assets/2025-12-30 17.34.12.jpg",
+      title: "Your Image 4 Title",
+      description: "Description for your fourth image"
     },
     {
-      url: "https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?w=600&h=400&fit=crop",
-      title: "Medical Team",
-      description: "Collaborating with healthcare professionals"
+      url: "src/assets/2025-12-30 17.23.31.jpg",
+      title: "Your Image 5 Title",
+      description: "Description for your fifth image"
     },
     {
-      url: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop",
-      title: "Community Outreach",
-      description: "Health awareness program in rural communities"
+      url: "src/assets/2025-12-30 17.22.55.jpg",
+      title: "Your Image 6 Title",
+      description: "Description for your sixth image"
     }
   ];
 
@@ -61,11 +61,11 @@ const Gallery = () => {
               className="group relative rounded-2xl overflow-hidden shadow-elegant cursor-pointer"
               onClick={() => setSelectedImage(index)}
             >
-              <div className="aspect-[3/2] overflow-hidden">
+              <div className="overflow-hidden">
                 <img
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-auto object-contain group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
@@ -95,7 +95,7 @@ const Gallery = () => {
           </button>
           <div className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
             <img
-              src={images[selectedImage].url.replace('w=600&h=400', 'w=1200&h=800')}
+              src={images[selectedImage].url}
               alt={images[selectedImage].title}
               className="w-full h-auto rounded-2xl shadow-elegant-lg"
             />

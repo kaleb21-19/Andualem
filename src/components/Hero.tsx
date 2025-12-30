@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="opacity-0 animate-fade-in-up">
               <span className="inline-block px-4 py-2 rounded-full bg-teal/20 text-teal-light text-sm font-medium mb-6">
-                Medical Excellence & Compassionate Care
+                Global Health & Humanitarian Medicine
               </span>
             </div>
             
@@ -32,9 +32,9 @@ const Hero = () => {
             </h1>
             
             <p className="opacity-0 animate-fade-in-up animation-delay-200 text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              Dedicated physician with over 15 years of experience in internal medicine and 
-              patient-centered care. Committed to advancing healthcare through compassion, 
-              expertise, and continuous learning.
+              Public health physician with extensive experience in immunization, emergency response, 
+              and health systems strengthening. Partnered with WHO, UNICEF, and ICRC to deliver 
+              life-saving healthcare in Ethiopia, Pakistan, and South Sudan.
             </p>
 
             <div className="opacity-0 animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -45,7 +45,11 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a 
+                  href="https://www.linkedin.com/in/andualem-assefa-assefa-501b01239" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="mr-2 h-5 w-5" />
                   LinkedIn Profile
                 </a>
@@ -56,15 +60,15 @@ const Hero = () => {
             <div className="opacity-0 animate-fade-in-up animation-delay-400 grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-primary-foreground/10">
               <div>
                 <div className="text-3xl md:text-4xl font-display text-gold">15+</div>
-                <div className="text-sm text-primary-foreground/60 mt-1">Years Experience</div>
+                <div className="text-sm text-primary-foreground/60 mt-1">Years in Global Health</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-display text-gold">10K+</div>
-                <div className="text-sm text-primary-foreground/60 mt-1">Patients Treated</div>
+                <div className="text-3xl md:text-4xl font-display text-gold">100+</div>
+                <div className="text-sm text-primary-foreground/60 mt-1">Campaigns & Field Missions</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-display text-gold">50+</div>
-                <div className="text-sm text-primary-foreground/60 mt-1">Publications</div>
+                <div className="text-3xl md:text-4xl font-display text-gold">3</div>
+                <div className="text-sm text-primary-foreground/60 mt-1">Countries Served</div>
               </div>
             </div>
           </div>
@@ -75,7 +79,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-accent-gradient rounded-3xl rotate-6 opacity-20" />
               <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-3xl overflow-hidden shadow-glow">
                 <img
-                  src={heroImage}
+                  src="src/assets/2025-12-30 17.39.26.jpg"
                   alt="Dr. Andualem Assefa - Professional Portrait"
                   className="w-full h-full object-cover object-top"
                 />
@@ -87,8 +91,8 @@ const Hero = () => {
                     <span className="text-accent-foreground font-display text-lg">MD</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground text-sm">Board Certified</div>
-                    <div className="text-muted-foreground text-xs">Internal Medicine</div>
+                    <div className="font-semibold text-foreground text-sm">Medical Doctor</div>
+                    <div className="text-muted-foreground text-xs">Addis Ababa University</div>
                   </div>
                 </div>
               </div>

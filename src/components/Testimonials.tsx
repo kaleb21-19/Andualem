@@ -5,42 +5,43 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
-    {
-      quote: "Dr. Andualem's expertise and compassionate care transformed my health journey. His thorough approach to diagnosis and treatment gave me confidence in my recovery.",
-      author: "M.T.",
-      role: "Patient",
-      rating: 5,
-      location: "Addis Ababa"
-    },
-    {
-      quote: "An exceptional physician who combines deep medical knowledge with genuine empathy. Dr. Assefa takes the time to explain everything clearly and ensure you understand your treatment plan.",
-      author: "S.K.",
-      role: "Patient",
-      rating: 5,
-      location: "Addis Ababa"
-    },
-    {
-      quote: "Working alongside Dr. Andualem has been an incredible learning experience. His dedication to patient care and medical research sets the standard for excellence in our field.",
-      author: "Dr. Hiwot M.",
-      role: "Colleague",
-      rating: 5,
-      location: "Black Lion Hospital"
-    },
-    {
-      quote: "Dr. Assefa's contributions to cardiovascular research have significantly impacted healthcare practices in Ethiopia. His work is both innovative and practical.",
-      author: "Prof. Daniel A.",
-      role: "Research Collaborator",
-      rating: 5,
-      location: "Addis Ababa University"
-    },
-    {
-      quote: "After years of struggling with chronic conditions, Dr. Andualem developed a comprehensive treatment plan that finally worked. I am grateful for his persistence and care.",
-      author: "A.B.",
-      role: "Patient",
-      rating: 5,
-      location: "Addis Ababa"
-    }
-  ];
+  {
+    quote: "Dr. Andualem’s leadership during the COVID-19 response was invaluable. His guidance on case management and facility readiness strengthened our regional capacity.",
+    author: "Dr. Selam T.",
+    role: "WHO Colleague",
+    rating: 5,
+    location: "Addis Ababa"
+  },
+  {
+    quote: "His dedication to immunization campaigns ensured that even hard-to-reach communities received life-saving vaccines. A true advocate for public health.",
+    author: "Mr. Bekele A.",
+    role: "UNICEF Partner",
+    rating: 5,
+    location: "Amhara Region"
+  },
+  {
+    quote: "Working with Dr. Andualem in conflict-affected areas showed me what resilience and compassion look like in practice. He always put communities first.",
+    author: "Sara M.",
+    role: "ICRC Field Nurse",
+    rating: 5,
+    location: "Bahirdar"
+  },
+  {
+    quote: "His mentorship improved our ability to deliver HIV and maternal health services. Dr. Assefa’s commitment to capacity building is unmatched.",
+    author: "Dr. Dawit K.",
+    role: "Abt Associates Colleague",
+    rating: 5,
+    location: "Addis Ababa"
+  },
+  {
+    quote: "Dr. Andualem’s rapid health assessments during emergencies helped us respond quickly and effectively. His expertise saved countless lives.",
+    author: "Ms. Hana G.",
+    role: "Regional Health Bureau Official",
+    rating: 5,
+    location: "Oromia"
+  }
+];
+
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);

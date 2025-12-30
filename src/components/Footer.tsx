@@ -23,11 +23,12 @@ const Footer = () => {
               Dr. Andualem Assefa
             </h3>
             <p className="text-primary-foreground/70 mb-6 max-w-md">
-              Dedicated physician committed to excellence in patient care, medical research, 
+              Dedicated physician committed to excellence in patient care, public health, 
               and advancing healthcare in Ethiopia and beyond.
             </p>
             <a
               href="mailto:dr.andualem@example.com"
+              aria-label="Email Dr. Andualem Assefa"
               className="inline-flex items-center gap-2 text-teal-light hover:text-teal transition-colors"
             >
               <Mail className="w-5 h-5" />
@@ -81,7 +82,7 @@ const Footer = () => {
             {/* Social */}
             <div className="mt-6">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/andualem-assefa-assefa-501b01239"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary-foreground/10 text-primary-foreground hover:bg-teal/30 transition-colors"

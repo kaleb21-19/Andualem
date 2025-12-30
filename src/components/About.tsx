@@ -5,34 +5,22 @@ const About = () => {
     {
       year: "2005",
       degree: "Doctor of Medicine (MD)",
-      institution: "Addis Ababa University School of Medicine",
-      description: "Graduated with distinction, Dean's List recipient"
-    },
-    {
-      year: "2008",
-      degree: "Residency in Internal Medicine",
-      institution: "Black Lion Specialized Hospital",
-      description: "Chief Resident during final year"
-    },
-    {
-      year: "2012",
-      degree: "Fellowship in Cardiology",
-      institution: "Johns Hopkins University Hospital",
-      description: "Specialized training in interventional cardiology"
-    },
-    {
-      year: "2015",
-      degree: "Master of Public Health (MPH)",
-      institution: "Harvard T.H. Chan School of Public Health",
-      description: "Focus on healthcare systems and global health"
+      institution: "Addis Ababa University, Medical Faculty",
+      description: "Completed medical training with focus on public health and clinical practice"
     }
   ];
 
   const certifications = [
-    { name: "Board Certified Internal Medicine", issuer: "American Board of Internal Medicine" },
-    { name: "Advanced Cardiac Life Support (ACLS)", issuer: "American Heart Association" },
-    { name: "Fellow of the American College of Physicians", issuer: "ACP" },
-    { name: "Global Health Leadership Certificate", issuer: "Harvard Medical School" }
+    { name: "Quality Control Expertise", issuer: "Professional Experience" },
+    { name: "Health Systems Strengthening", issuer: "WHO & ICRC Programs" },
+    { name: "Polio Surveillance & Immunization", issuer: "WHO STOP Program" }
+  ];
+
+  const awards = [
+    "Recognized for leadership in COVID-19 case management, WHO Ethiopia (2021)",
+    "Commendation for immunization campaign coordination, UNICEF/EFDA (2023)",
+    "Acknowledged for rapid health assessments in conflict zones, ICRC (2024)",
+    "Certificate of appreciation for polio eradication support, WHO Pakistan (2017)"
   ];
 
   return (
@@ -48,11 +36,11 @@ const About = () => {
             About Me
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-4">
-            Dedicated to <span className="text-gradient">Excellence</span> in Healthcare
+            Dedicated to <span className="text-gradient">Global Health</span> & Humanitarian Service
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A physician committed to providing exceptional patient care through evidence-based 
-            medicine and a compassionate approach.
+            A physician and public health professional committed to strengthening health systems, 
+            leading emergency responses, and advancing immunization programs across Ethiopia and beyond.
           </p>
         </div>
 
@@ -67,15 +55,15 @@ const About = () => {
                 <h3 className="text-2xl font-display text-foreground">My Philosophy</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Medicine is not just a profession—it is a calling to serve humanity with 
-                compassion, integrity, and excellence. Throughout my career, I have been 
-                guided by the principle that every patient deserves personalized, 
-                evidence-based care delivered with empathy and respect.
+                Healthcare is more than treatment—it is about resilience, equity, and compassion. 
+                My career has been dedicated to serving vulnerable communities in humanitarian 
+                and emergency contexts, ensuring access to essential health services even in 
+                the most challenging environments.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My approach combines cutting-edge medical knowledge with traditional values 
-                of patient-centered care, ensuring that each individual receives not just 
-                treatment, but genuine healing and support throughout their healthcare journey.
+                From leading immunization campaigns to conducting rapid health assessments in 
+                conflict zones, I strive to combine evidence-based medicine with empathy, 
+                collaboration, and system-strengthening for lasting impact.
               </p>
             </div>
 
@@ -88,22 +76,12 @@ const About = () => {
                 <h3 className="text-2xl font-display text-primary-foreground">Awards & Recognition</h3>
               </div>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-gold mt-2" />
-                  <span className="text-primary-foreground/80">Excellence in Patient Care Award, 2022</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-gold mt-2" />
-                  <span className="text-primary-foreground/80">Top Doctor Award, Ethiopian Medical Association, 2020</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-gold mt-2" />
-                  <span className="text-primary-foreground/80">Research Innovation Award, African Health Summit, 2019</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-gold mt-2" />
-                  <span className="text-primary-foreground/80">Distinguished Alumni Award, Addis Ababa University, 2018</span>
-                </li>
+                {awards.map((award, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-gold mt-2" />
+                    <span className="text-primary-foreground/80">{award}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -142,7 +120,7 @@ const About = () => {
                 <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
                   <BookOpen className="w-6 h-6 text-gold" />
                 </div>
-                <h3 className="text-2xl font-display text-foreground">Certifications</h3>
+                <h3 className="text-2xl font-display text-foreground">Core Expertise</h3>
               </div>
               <div className="grid gap-3">
                 {certifications.map((cert, index) => (
