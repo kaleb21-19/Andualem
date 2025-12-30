@@ -1,7 +1,106 @@
 import { Download, Briefcase, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const CVSection = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
+
+  const timelineItemVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  const leftItemVariants = {
+    hidden: { 
+      opacity: 0, 
+      x: -50,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  const rightItemVariants = {
+    hidden: { 
+      opacity: 0, 
+      x: 50,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        delay: 0.3,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
+  const legendVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 1.5,
+      },
+    },
+  };
   const timeline = [
     {
       year: "2023 - Present",
@@ -59,7 +158,12 @@ const CVSection = () => {
 
       <div className="container relative mx-auto px-4">
         {/* Section header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          variants={headerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <span className="inline-block px-4 py-2 rounded-full bg-teal/10 text-teal text-sm font-medium mb-4">
             Curriculum Vitae
           </span>
@@ -69,20 +173,33 @@ const CVSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             A visual overview of my academic journey and professional experience in global health and humanitarian medicine.
           </p>
-        </div>
+        </motion.div>
 
         {/* Download CV button */}
         <div className="text-center mb-12">
-          <Button variant="gold" size="lg" asChild>
-            <a href="/public/Profile.pdf" download target="_blank" rel="noopener noreferrer">
-              <Download className="mr-2 h-5 w-5" />
-              Download Full CV (PDF)
-            </a>
-          </Button>
+          <motion.a
+            href="/public/Profile.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-gold to-gold/80 text-foreground font-medium rounded-xl shadow-elegant hover:shadow-elegant-lg transition-all"
+          >
+            <Download className="mr-2 h-5 w-5" />
+            Download Full CV (PDF)
+          </motion.a>
         </div>
 
         {/* Timeline */}
-        <div className="max-w-3xl mx-auto">
+        <motion.div 
+          className="max-w-3xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <div className="relative">
             {/* Center line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block" />
@@ -93,7 +210,12 @@ const CVSection = () => {
                 const isEven = index % 2 === 0;
 
                 return (
-                  <div key={index} className={`relative md:flex ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
+                  <motion.div 
+                    key={index} 
+                    className={`relative md:flex ${isEven ? 'md:justify-start' : 'md:justify-end'}`}
+                    variants={isEven ? leftItemVariants : rightItemVariants}
+                    whileHover={{ scale: 1.02 }}
+                  >
                     {/* Dot on timeline */}
                     <div className="hidden md:block absolute left-1/2 top-6 -translate-x-1/2">
                       <div className={`w-4 h-4 rounded-full ${isEducation ? 'bg-teal' : 'bg-gold'} border-4 border-background`} />
@@ -120,15 +242,20 @@ const CVSection = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Legend */}
-        <div className="flex justify-center gap-8 mt-12">
+        <motion.div 
+          className="flex justify-center gap-8 mt-12"
+          variants={legendVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-teal" />
             <span className="text-sm text-muted-foreground">Education</span>
@@ -137,7 +264,7 @@ const CVSection = () => {
             <div className="w-3 h-3 rounded-full bg-gold" />
             <span className="text-sm text-muted-foreground">Experience</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,6 +1,45 @@
 import { Calendar, MapPin, Briefcase } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ProfessionalExperience = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
   const experiences = [
     {
       role: "Health Field Officer",
@@ -125,7 +164,12 @@ const ProfessionalExperience = () => {
 
       <div className="container relative mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          variants={headerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <span className="inline-block px-4 py-2 rounded-full bg-gold/10 text-gold text-sm font-medium mb-4">
             Career Journey
           </span>
@@ -138,14 +182,24 @@ const ProfessionalExperience = () => {
             Over a decade of leadership in clinical care, humanitarian response,
             public health surveillance, and global health system strengthening.
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div className="max-w-4xl mx-auto space-y-6">
+        <motion.div 
+          className="max-w-4xl mx-auto space-y-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-card rounded-2xl p-6 border border-border/50 shadow-elegant hover:shadow-elegant-lg transition-all"
+              variants={cardVariants}
+              whileHover={{ 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+              }}
             >
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(exp.type)}`}>
@@ -176,9 +230,9 @@ const ProfessionalExperience = () => {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
